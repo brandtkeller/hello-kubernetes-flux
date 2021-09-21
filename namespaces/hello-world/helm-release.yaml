@@ -20,3 +20,6 @@ spec:
       tag: 1.19.2
   interval: 30s
   targetNamespace: hello-world
+  valuesFrom:
+  - kind: ConfigMap
+    name: hello-cm
