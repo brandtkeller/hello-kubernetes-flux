@@ -13,6 +13,9 @@ spec:
         name: hello-kubernetes-git
         namespace: hello-world
   values:
-    author: "Dwayne Hicks"
+    image:
+      registry: registry.home.local
+      name: ironbank/opensource/nginx/nginx
+      tag: 1.19.2
   interval: 30s
   targetNamespace: hello-world
