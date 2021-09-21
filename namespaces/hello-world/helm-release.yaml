@@ -1,0 +1,18 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: hello-kubernetes-helm
+  namespace: hello-world
+spec:
+  chart:
+    spec:
+      chart: ./
+      sourceRef:
+        kind: GitRepository
+        name: hello-kubernetes-git
+        namespace: hello-world
+  values:
+    author: "Dwayne Hicks"
+  interval: 30s
+  targetNamespace: hello-world

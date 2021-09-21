@@ -1,0 +1,11 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta1
+kind: GitRepository
+metadata:
+  name: hello-kubernetes-git
+  namespace: hello-world
+spec:
+  interval: 1m0s
+  ref:
+    branch: demo/example
+  url: https://github.com/brandtkeller/hello-kubernetes-helm
